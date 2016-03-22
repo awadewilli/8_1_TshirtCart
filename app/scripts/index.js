@@ -5,7 +5,6 @@ var cart = [];
 
 var cartString = localStorage.getItem('cart');
 console.log(cartString);
-
 var cartObject = jQuery.parseJSON(cartString);
 console.log(cartObject);
 
@@ -20,14 +19,11 @@ $.fn.serializeObject = function() {
 $('.addtocart').click(function(e){
   e.preventDefault();
   var formValues = $(this).parent().serializeObject();
-  var cartValues = JSON.stringify(formValues);
-  cart.push(cartValues);
-  console.log(cartValues);
-  console.log(cart);
+  cart.push(formValues);
 });
 
 $('.checkout').click(function(e){
-  localStorage.setItem('cart',cart);
+  localStorage.setItem('cart',JSON.stringify(cart));
   window.location.replace('./cart.html');
 });
 
@@ -41,6 +37,8 @@ $('.delete').click(function(e){
   console.log('this');
   // cart = _.without(cart,this);
 });
+
+
 var source   = $('#table-template').html();
 var template = Handlebars.compile(source);
 
