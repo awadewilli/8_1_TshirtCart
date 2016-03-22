@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="jumbotron">
+    <h1>Your Cart</h1>
+  </div>
+  <table class="table table-striped" id="cart-table">
+    <tr>
+      <td>Item</td>
+      <td>Size</td>
+      <td>Price</td>
+      <td>Quantity</td>
+      <td>Time</td>
+    </tr>
+  </table>
+</div>
+<div>
+  <button class="btn btn-success complete-checkout" type="button">
+      Complete Checkout
+  </button>
+</div>
+<script id="table-template" type="text/x-handlebars-template">
+  <tr>
+    <td>{{item}}</td>
+    <td>{{size}}</td>
+    <td>{{price}}</td>
+    <td>{{quantity}}</td>
+    <td>{{time}}</td>
+    <td>
+      <button class="btn btn-danger delete">
+          X
+      </button>
+    </td>
+  </tr>
+</script>
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
