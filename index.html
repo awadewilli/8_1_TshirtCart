@@ -22,7 +22,8 @@
       </div>
     </header>
     <article class="row">
-      <div class="col-md-4">
+
+      <div class="col-md-4">        
         <div class="product-container">
           <img src="http://www.thinkgeek.com/images/products/additional/carousel/1640_laser_research.jpg">
           <span class="design-name">Laser Research</span>
@@ -42,42 +43,49 @@
           </form>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="product-container">
           <img src="http://www.thinkgeek.com/images/products/additional/carousel/ea08_tesla_edison_dd.jpg">
           <span class="design-name">Tesla vs Edison</span>
-          <span class="price">$15</span>
+          <span class="price">$16</span>
           <form class="input2">
-          <select name="size" class="size">
-             <option value="S">S</option>
-             <option value="M">M</option>
-             <option value="L">L</option>
-             <option value="XL">XL</option>
-              <option value="XXL">XL</option>
-          </select>
-          <input class="quantity" type="number" placeholder="quantity" name="quantity" min="0" max="2000">
-          <button class="addtocart" type="button">Add to Cart</button>
+            <input type="text" class="hidden" name="item" value="Tesla vs Edison">
+            <input type="text" class="hidden" name="Price" value="16">
+            <select name="size" class="size">
+               <option value="S">S</option>
+               <option value="M">M</option>
+               <option value="L">L</option>
+               <option value="XL">XL</option>
+                <option value="XXL">XL</option>
+            </select>
+            <input class="quantity" type="number" placeholder="quantity" name="quantity" min="0" max="2000">
+            <button class="addtocart" type="button">Add to Cart</button>
         </form>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="product-container">
           <img src="http://www.thinkgeek.com/images/products/additional/carousel/f141_coder_dd.jpg">
           <span class="design-name">Most Interesting Coder</span>
           <span class="price">$15</span>
           <form class="input3">
-          <select name="size">
-             <option value="S">S</option>
-             <option value="M">M</option>
-             <option value="L">L</option>
-             <option value="XL">XL</option>
-              <option value="XXL">XL</option>
-          </select>
-          <input type="number" placeholder="quantity" name="quantity" min="0" max="2000">
-          <button class="addtocart" type="button">Add to Cart</button>
+            <input type="text" class="hidden" name="item" value="Most Interesting Coder">
+            <input type="text" class="hidden" name="Price" value="17">
+            <select name="size">
+               <option value="S">S</option>
+               <option value="M">M</option>
+               <option value="L">L</option>
+               <option value="XL">XL</option>
+                <option value="XXL">XL</option>
+            </select>
+            <input type="number" placeholder="quantity" name="quantity" min="0" max="2000">
+            <button class="addtocart" type="button">Add to Cart</button>
         </form>
         </div>
       </div>
+
     </article>
     <div class="Checkout">
       <button class="btn btn-success checkout" type="button">
