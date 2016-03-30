@@ -5,8 +5,8 @@ var cart = [];
 
 var cartString = localStorage.getItem('cart');
 console.log(cartString);
-var cartObject = jQuery.parseJSON(cartString);
-console.log(cartObject);
+var cartObjects = jQuery.parseJSON(cartString);
+console.log(cartObjects);
 
 $.fn.serializeObject = function() {
   return this.serializeArray().reduce(function(acum, i) {
@@ -32,17 +32,24 @@ $('.complete-checkout').click(function(e){
   window.location.replace('./index.html');
 });
 
-$('.delete').click(function(e){
-  e.preventDefault();
-  console.log('this');
-  // cart = _.without(cart,this);
-});
 
 
 var source   = $('#table-template').html();
 var template = Handlebars.compile(source);
 
+
+cartObjects.map(function(cartItem){
+  complile(cartItem);
+});
+
+function complile(cartObject){
 var context = {'item':cartObject.item, 'price':cartObject.Price, 'size':cartObject.size, 'quantity':cartObject.quantity, time:'500secs'};
 var tableHtml = template(context);
 
 $('#cart-table').append(tableHtml);
+}
+
+$('.delete').click(function(e){
+  e.preventDefault();
+
+});
